@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chirag Khandelwal Portfolio</title>
-  <meta name="description" content="Portfolio of Chirag Khandelwal Bioinformatics Engineer projects, experience, and skills">
+  <meta name="description" content="Portfolio of Chirag Khandelwal, Bioinformatics Engineer: projects, experience, and skills">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- HERO SECTION -->
-  <header>
+  <header id="home">
     <h1>Chirag Khandelwal</h1>
     <p>Bioinformatics Engineer | Arizona State University</p>
+    <button id="mode" class="btn ghost" aria-pressed="false" aria-label="Toggle color mode">☀︎/☾</button>
     <a class="btn ghost" href="https://linkedin.com/in/chiragkhandelwal7" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn ghost" href="https://github.com/ChiragK10" target="_blank" rel="noopener">GitHub</a>
   </header>
+
   <!-- KEY DOMAINS / SKILLS -->
-  <section aria-label="Key domains" class="chips">
+  <section class="chips" aria-label="Key domains">
     <span class="chip">Nextflow / Snakemake</span>
     <span class="chip">GATK / bcftools / VEP</span>
     <span class="chip">Slurm / Docker / CICD</span>
     <span class="chip">AWS (S3/EC2/Lambda/HealthOmics)</span>
   </section>
+
   <!-- PROJECTS SECTION -->
   <section id="projects">
     <h2>Selected Projects</h2>
     <div class="grid">
       <article class="tile" style="grid-column: span 7;">
-        <h3>De Novo Assembly & Annotation PacBio/ONT HiC</h3>
+        <h3>De Novo Assembly &amp; Annotation PacBio/ONT HiC</h3>
         <p class="meta">Nextflow | Docker | AWS | Slurm | RepeatModeler/Masker | HiCPro | HGA</p>
         <p>Designed a modular assembly/annotation workflow with containerized steps and provenance tracking. Automated HiC scaffolding/exported browser-ready tracks UCSC for collaborators.</p>
         <div class="skills">
@@ -45,7 +48,7 @@
       <article class="tile" style="grid-column: span 6;">
         <h3>Single-Cell RA Analysis</h3>
         <p class="meta">Scanpy | scVI | Harmony | SOLO | scrublet | fgsea</p>
-        <p>Reproducible scRNAseq workflow with doublet detection, batch correction, & pathway analysis revealed immune cell shifts linked to progression.</p>
+        <p>Reproducible scRNAseq workflow with doublet detection, batch correction, &amp; pathway analysis revealed immune cell shifts linked to progression.</p>
         <div class="skills">
           <span class="skill">Scanpy</span><span class="skill">scVI</span><span class="skill">Harmony</span>
         </div>
@@ -60,6 +63,7 @@
       </article>
     </div>
   </section>
+
   <!-- EXPERIENCE SECTION -->
   <section id="experience">
     <h2>Experience</h2>
@@ -67,7 +71,7 @@
       <article class="tile" style="grid-column: span 12;">
         <h3>Research Assistant, Maley Lab, ASU <span class="badge">Aug 2025 – Present</span></h3>
         <p class="meta">NIH-funded Computational oncology, WGS/WGBS pipelines, CICD</p>
-        <ul class="list">
+        <ul class="list" role="list">
           <li>Dockerized Nextflow pipelines on Slurm, CI autotest release.</li>
           <li>Bayesian phylogenetic modeling (BEAST, PISCA) for stem cell turnover.</li>
           <li>Standardized variant workflows VEP/ANNOVAR validated against Ensembl/UCSC.</li>
@@ -75,57 +79,60 @@
       </article>
       <article class="tile" style="grid-column: span 12;">
         <h3>Translational Research Fellow, Arizona State University <span class="badge">Jan 2024 – Present</span></h3>
-        <ul class="list">
-          <li>De novo assembly & annotation pipelines orchestrated Nextflow/Docker/HPC/AWS.</li>
-          <li>Automated HiC analysis: HiCPro, HGA & repeat modeling RepeatMasker/Modeler.</li>
+        <ul class="list" role="list">
+          <li>De novo assembly &amp; annotation pipelines orchestrated Nextflow/Docker/HPC/AWS.</li>
+          <li>Automated HiC analysis: HiCPro, HGA &amp; repeat modeling RepeatMasker/Modeler.</li>
           <li>Reproducible scRNAseq/bulk RNAseq pipelines in R/Python.</li>
         </ul>
       </article>
       <article class="tile" style="grid-column: span 12;">
         <h3>Bioinformatics Intern, NGS Clinical, Ruby Hall Clinic <span class="badge">May 2023 – Jul 2023</span></h3>
-        <ul class="list">
-          <li>Designed clinical pipelines BWA/GATK/SAMtools & CNV benchmarking.</li>
+        <ul class="list" role="list">
+          <li>Designed clinical pipelines BWA/GATK/SAMtools &amp; CNV benchmarking.</li>
           <li>Improved QC reports with MultiQC, increased reliability for oncology calls.</li>
         </ul>
       </article>
     </div>
   </section>
+
   <!-- SKILLS SECTION -->
   <section id="skills">
     <h2>Skills</h2>
     <div class="tile">
       <div class="row">
         <strong>Programming</strong>
-        <span class="skill">Python</span><span class="skill">R</span><span class="skill">C/C++</span><span class="skill">Bash</span><span class="skill">SQL</span>
+        <div class="skills"><span class="skill">Python</span><span class="skill">R</span><span class="skill">C/C++</span><span class="skill">Bash</span><span class="skill">SQL</span></div>
       </div>
       <div class="row">
-        <strong>Workflows & Infra</strong>
-        <span class="skill">Nextflow</span><span class="skill">Snakemake</span><span class="skill">Docker</span><span class="skill">Kubernetes</span><span class="skill">GitHub Actions</span><span class="skill">Slurm</span><span class="skill">AWS</span>
+        <strong>Workflows &amp; Infra</strong>
+        <div class="skills"><span class="skill">Nextflow</span><span class="skill">Snakemake</span><span class="skill">Docker</span><span class="skill">Kubernetes</span><span class="skill">GitHub Actions</span><span class="skill">Slurm</span><span class="skill">AWS</span></div>
       </div>
       <div class="row">
         <strong>Variant Repertoire</strong>
-        <span class="skill">GATK</span><span class="skill">SAMtools</span><span class="skill">bcftools</span><span class="skill">VEP</span><span class="skill">ANNOVAR</span><span class="skill">MiXCR</span><span class="skill">TRUST4</span>
+        <div class="skills"><span class="skill">GATK</span><span class="skill">SAMtools</span><span class="skill">bcftools</span><span class="skill">VEP</span><span class="skill">ANNOVAR</span><span class="skill">MiXCR</span><span class="skill">TRUST4</span></div>
       </div>
       <div class="row">
         <strong>Epigenetics</strong>
-        <span class="skill">bismark</span><span class="skill">methylKit</span><span class="skill">bsseq</span>
+        <div class="skills"><span class="skill">bismark</span><span class="skill">methylKit</span><span class="skill">bsseq</span></div>
       </div>
       <div class="row">
-        <strong>Data QC & Viz</strong>
-        <span class="skill">FastQC</span><span class="skill">MultiQC</span><span class="skill">ggplot2</span><span class="skill">matplotlib</span><span class="skill">Cytoscape</span>
+        <strong>Data QC &amp; Viz</strong>
+        <div class="skills"><span class="skill">FastQC</span><span class="skill">MultiQC</span><span class="skill">ggplot2</span><span class="skill">matplotlib</span><span class="skill">Cytoscape</span></div>
       </div>
     </div>
   </section>
+
   <!-- PUBLICATIONS -->
   <section id="publications">
     <h2>Publications</h2>
     <div class="tile">
-      <ul class="list">
+      <ul class="list" role="list">
         <li>Khandelwal C. Natural Remedies for Onychomycosis: A Review. <em>J Nat Remedies</em> 23(4), Oct 2023.</li>
         <li>In progress: Trophic levels explain the inverse association between genetic variation and neoplasia in mammals.</li>
       </ul>
     </div>
   </section>
+
   <!-- CONTACT SECTION -->
   <section id="contact">
     <h2>Contact</h2>
@@ -136,15 +143,18 @@
       <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/chiragkhandelwal7" target="_blank" rel="noopener">linkedin.com/in/chiragkhandelwal7</a></p>
     </div>
   </section>
+
   <footer class="footer">
     <div class="row" style="justify-content:space-between;align-items:center;">
       <span id="y">2025</span> Chirag Khandelwal | Built with vanilla HTML/CSS/JS | MIT Licensed
       <div class="footlinks"><a href="#home">Back to top</a></div>
     </div>
   </footer>
+
   <script>
     // Set year
     document.getElementById('y').textContent = new Date().getFullYear();
+
     // Color mode toggle
     // Uncomment below to persist theme in localStorage
     /*
@@ -162,12 +172,14 @@
       }
     });
     */
+
     // Skip-link for accessibility
     const skip = document.createElement('a');
     skip.href = '#projects';
     skip.textContent = 'Skip to content';
     skip.className = 'sr-only';
     document.body.prepend(skip);
+
     // Rich search/OG
     const ld = {
       "@context": "https://schema.org",
