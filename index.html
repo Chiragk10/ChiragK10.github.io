@@ -1,206 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chirag Khandelwal Portfolio</title>
-  <meta name="description" content="Portfolio of Chirag Khandelwal, Bioinformatics Engineer: projects, experience, and skills">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chirag Khandelwal — Bioinformatics Engineer</title>
+  <meta name="description" content="NGS pipelines, AI‑genomics, reproducible workflows (Nextflow/Snakemake, Docker, AWS)." />
+  <link rel="canonical" href="https://chiragk10.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🧬</text></svg>">
+  <meta property="og:title" content="Chirag Khandelwal — Bioinformatics Engineer" />
+  <meta property="og:description" content="NGS pipelines, AI‑genomics, reproducible workflows (Nextflow/Snakemake, Docker, AWS)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chiragk10.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fafc; --text:#1e2632; --muted:#6b7682; --panel:#ffffff; --ring:#19b9ad;
+      --accent:#179fae; --accent-dark:#136c71; --accent-soft:#e3f7f4; --grid:#e7edf2;
+      --radius:14px; --shadow:0 8px 24px rgba(17, 24, 39, .06);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    html,body{height:auto; min-height:100%}
+    body{margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif; background:var(--bg); color:var(--text); line-height:1.65; overflow-y:auto}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{ width:min(1150px, 92%); margin:0 auto; }
+    .topbar{ position:sticky; top:0; z-index:30; backdrop-filter:saturate(180%) blur(6px); background:rgba(255,255,255,.86); border-bottom:1px solid var(--grid) }
+    .topbar-inner{ display:flex; align-items:center; justify-content:space-between; padding:.75rem 0 }
+    .navlinks a{ margin-left:1rem; font-weight:600; color:var(--accent-dark) }
+    main.layout{ display:grid; grid-template-columns:minmax(0, 1fr) 320px; gap:24px; }
+    @media (max-width: 1024px){ main.layout{ grid-template-columns:1fr } }
+    .content{ min-width:0 }
+    .sidebar{ position:sticky; top:84px; height:fit-content; display:grid; gap:16px }
+    @media (max-width: 1024px){ .sidebar{ position:static } }
+    .hero{ display:grid; grid-template-columns: 1.15fr .85fr; align-items:center; gap:24px; padding:42px 0 18px }
+    .hero h1{ font-size: clamp(1.9rem, 1.4rem + 2vw, 3rem); line-height:1.1; margin:.2rem 0 .6rem }
+    .hero .sub{ color:var(--muted) }
+    .chips{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.9rem }
+    .chip{ background:var(--accent-soft); color:var(--accent-dark); padding:.35rem .7rem; border-radius:999px; font-weight:700; font-size:.9rem }
+    .hero-cards{ display:grid; gap:1rem }
+    .card,.tile{ background:var(--panel); border:1px solid var(--grid); border-radius:var(--radius); padding:1.1rem; box-shadow:var(--shadow) }
+    .kpi{ display:flex; gap:1rem }
+    .kpi span{ font-weight:800 }
+    section{ padding:24px 0 }
+    h2{ font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); margin:.4rem 0 1rem; letter-spacing:-.3px }
+    #projects .grid, #experience .grid{ display:grid; gap:16px; grid-template-columns:repeat(2, minmax(0, 1fr)); align-items:stretch }
+    @media (max-width: 860px){ #projects .grid, #experience .grid{ grid-template-columns:1fr } }
+    .list{ display:grid; gap:.5rem; padding-left:1rem }
+    .skills{ display:flex; flex-wrap:wrap; gap:.5rem }
+    .skill{ background:var(--accent-soft); color:var(--accent-dark); font-weight:700; padding:.35rem .6rem; border-radius:10px; font-size:.9rem }
+    .btn{ display:inline-grid; place-items:center; padding:.6rem 1rem; border-radius:999px; font-weight:800; border:2px solid var(--accent); color:var(--accent); background:transparent }
+    .btn:hover{ background:#d8f6f3; text-decoration:none }
+    .badge{ background:var(--accent-soft); color:var(--accent-dark); border-radius:8px; padding:.15rem .45rem; font-weight:800; font-size:.75rem; margin-left:.4rem }
+    .meta{ color:var(--muted); font-size:.95rem }
+    .striped{ background:#f6f9fb; border-radius:var(--radius); padding:18px; border:1px solid var(--grid) }
+    .footer{ padding:28px 0 56px; color:var(--muted); border-top:1px solid var(--grid); margin-top:22px }
+    .footlinks{ display:flex; gap:1rem; flex-wrap:wrap }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
+    :focus-visible{ outline:3px solid var(--ring); outline-offset:2px }
+  </style>
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <header id="home">
-    <h1>Chirag Khandelwal</h1>
-    <p>Bioinformatics Engineer | Arizona State University</p>
-    <button id="mode" class="btn ghost" aria-pressed="false" aria-label="Toggle color mode">☀︎/☾</button>
-    <a class="btn ghost" href="https://linkedin.com/in/chiragkhandelwal7" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn ghost" href="https://github.com/ChiragK10" target="_blank" rel="noopener">GitHub</a>
-  </header>
-
-  <!-- KEY DOMAINS / SKILLS -->
-  <section class="chips" aria-label="Key domains">
-    <span class="chip">Nextflow / Snakemake</span>
-    <span class="chip">GATK / bcftools / VEP</span>
-    <span class="chip">Slurm / Docker / CICD</span>
-    <span class="chip">AWS (S3/EC2/Lambda/HealthOmics)</span>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="grid">
-      <article class="tile" style="grid-column: span 7;">
-        <h3>De Novo Assembly &amp; Annotation PacBio/ONT HiC</h3>
-        <p class="meta">Nextflow | Docker | AWS | Slurm | RepeatModeler/Masker | HiCPro | HGA</p>
-        <p>Designed a modular assembly/annotation workflow with containerized steps and provenance tracking. Automated HiC scaffolding/exported browser-ready tracks UCSC for collaborators.</p>
-        <div class="skills">
-          <span class="skill">Nextflow</span><span class="skill">Docker</span><span class="skill">HiCPro</span><span class="skill">HGA</span><span class="skill">AWS</span>
+<!-- TOPBAR NAV -->
+<header class="topbar" role="navigation" aria-label="Main">
+  <div class="container topbar-inner">
+    <strong>Chirag Khandelwal</strong>
+    <nav class="navlinks">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="container layout">
+  <div class="content">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div>
+        <h1>Computational Genomics & Reproducible Pipelines</h1>
+        <p class="sub">I build cloud‑native, testable workflows for NGS (WGS, WGBS, RNA‑seq) using Nextflow/Snakemake, Docker/Kubernetes, and AWS HealthOmics. I care about clean engineering, clinical reliability, and clear scientific storytelling.</p>
+        <div class="chips" aria-label="Key domains">
+          <span class="chip">Nextflow • Snakemake</span>
+          <span class="chip">GATK • bcftools • VEP</span>
+          <span class="chip">Slurm • Docker • CI/CD</span>
+          <span class="chip">AWS (HealthOmics)</span>
         </div>
-      </article>
-      <article class="tile" style="grid-column: span 5;">
-        <h3>Clinical NGS Pipeline: FASTQ-BAM-VCF</h3>
-        <p class="meta">BWA | GATK | SAMtools | MultiQC | CNV benchmarking</p>
-        <p>Hardened clinical variant calling flow, improved reporting with MultiQC, benchmarked CNV callers to raise confidence in oncology decisions.</p>
-        <div class="skills">
-          <span class="skill">GATK</span><span class="skill">SAMtools</span><span class="skill">MultiQC</span><span class="skill">VEP</span>
+        <div class="chips">
+          <a class="btn" href="./Bioinformatics%20Engineer%20Chirag.pdf" download>Download CV</a>
+          <a class="btn" href="https://github.com/ChiragK10" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://linkedin.com/in/chiragkhandelwal7" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-      </article>
-      <article class="tile" style="grid-column: span 6;">
-        <h3>Single-Cell RA Analysis</h3>
-        <p class="meta">Scanpy | scVI | Harmony | SOLO | scrublet | fgsea</p>
-        <p>Reproducible scRNAseq workflow with doublet detection, batch correction, &amp; pathway analysis revealed immune cell shifts linked to progression.</p>
-        <div class="skills">
-          <span class="skill">Scanpy</span><span class="skill">scVI</span><span class="skill">Harmony</span>
+      </div>
+      <div class="hero-cards">
+        <div class="card">
+          <div class="kpi">
+            <div>
+              <span>+40%</span>
+              <div class="meta">fewer pipeline reruns via CI‑guarded releases</div>
+            </div>
+            <div>
+              <span>End‑to‑End</span>
+              <div class="meta">FASTQ→BAM→VCF with QC & reporting</div>
+            </div>
+          </div>
         </div>
-      </article>
-      <article class="tile" style="grid-column: span 6;">
-        <h3>CHESS.cpp Simulation UX</h3>
-        <p class="meta">Flask | RShiny | C++ | Plotly</p>
-        <p>Built a friendly interface for tumor simulation parameter sweeps, improved reproducibility of runs with config snapshots.</p>
-        <div class="skills">
-          <span class="skill">C++</span><span class="skill">Flask</span><span class="skill">RShiny</span>
+        <div class="card">
+          <h3>Currently</h3>
+          <div class="meta">Research Assistant (NIH‑funded), Maley Lab, ASU</div>
+          <ul class="list" role="list">
+            <li>Dockerized Nextflow on Slurm • GitHub Actions CI/CD</li>
+            <li>CHESS.cpp tumor simulations + interactive Flask/RShiny</li>
+            <li>Bayesian/phylogenetic models (BEAST, PISCA)</li>
+          </ul>
         </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE SECTION -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="grid">
-      <article class="tile" style="grid-column: span 12;">
-        <h3>Research Assistant, Maley Lab, ASU <span class="badge">Aug 2025 – Present</span></h3>
-        <p class="meta">NIH-funded Computational oncology, WGS/WGBS pipelines, CICD</p>
-        <ul class="list" role="list">
-          <li>Dockerized Nextflow pipelines on Slurm, CI autotest release.</li>
-          <li>Bayesian phylogenetic modeling (BEAST, PISCA) for stem cell turnover.</li>
-          <li>Standardized variant workflows VEP/ANNOVAR validated against Ensembl/UCSC.</li>
-        </ul>
-      </article>
-      <article class="tile" style="grid-column: span 12;">
-        <h3>Translational Research Fellow, Arizona State University <span class="badge">Jan 2024 – Present</span></h3>
-        <ul class="list" role="list">
-          <li>De novo assembly &amp; annotation pipelines orchestrated Nextflow/Docker/HPC/AWS.</li>
-          <li>Automated HiC analysis: HiCPro, HGA &amp; repeat modeling RepeatMasker/Modeler.</li>
-          <li>Reproducible scRNAseq/bulk RNAseq pipelines in R/Python.</li>
-        </ul>
-      </article>
-      <article class="tile" style="grid-column: span 12;">
-        <h3>Bioinformatics Intern, NGS Clinical, Ruby Hall Clinic <span class="badge">May 2023 – Jul 2023</span></h3>
-        <ul class="list" role="list">
-          <li>Designed clinical pipelines BWA/GATK/SAMtools &amp; CNV benchmarking.</li>
-          <li>Improved QC reports with MultiQC, increased reliability for oncology calls.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="tile">
-      <div class="row">
-        <strong>Programming</strong>
+      </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>De Novo Assembly & Annotation (PacBio/ONT + Hi‑C)</h3>
+          <p class="meta">Nextflow • Docker • AWS/Slurm • RepeatModeler/Masker • HiC‑Pro • HGA</p>
+          <p>Designed a modular assembly/annotation workflow with containerized steps and provenance tracking. Automated Hi‑C scaffolding and repeat characterization; exported browser‑ready tracks (UCSC) for collaborators.</p>
+          <p class="meta"><a href="#" target="_blank" rel="noopener">Code</a> • <a href="#" target="_blank" rel="noopener">Docs</a></p>
+        </article>
+        <article class="tile">
+          <h3>Clinical NGS Pipeline (FASTQ→BAM→VCF)</h3>
+          <p class="meta">BWA • GATK • SAMtools • MultiQC • CNV benchmarking</p>
+          <p>Hardened a clinical variant calling flow, improved reporting with MultiQC, and benchmarked CNV callers to raise confidence in oncology decisions.</p>
+          <p class="meta"><a href="#" target="_blank" rel="noopener">Code</a> • <a href="#" target="_blank" rel="noopener">Docs</a></p>
+        </article>
+        <article class="tile">
+          <h3>Single‑Cell RA Analysis</h3>
+          <p class="meta">Scanpy • scVI • Harmony • SOLO/scrublet • fgsea</p>
+          <p>Reproducible scRNA‑seq workflow with doublet detection, batch correction, and pathway analysis; revealed immune cell shifts linked to progression.</p>
+          <p class="meta"><a href="#" target="_blank" rel="noopener">Code</a> • <a href="#" target="_blank" rel="noopener">Docs</a></p>
+        </article>
+        <article class="tile">
+          <h3>CHESS.cpp Simulation UX</h3>
+          <p class="meta">Flask • RShiny • C++ • Plotly</p>
+          <p>Built a friendly interface for tumor simulation parameter sweeps; accelerated collaborator iteration and improved reproducibility of runs with config snapshots.</p>
+          <p class="meta"><a href="#" target="_blank" rel="noopener">Code</a> • <a href="#" target="_blank" rel="noopener">Docs</a></p>
+        </article>
+      </div>
+    </section>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="tile">
+          <h3>Research Assistant — Maley Lab, ASU <span class="badge">Aug 2025 – Present</span></h3>
+          <p class="meta">NIH‑funded | Computational oncology, WGS/WGBS pipelines, CI/CD</p>
+          <ul class="list" role="list">
+            <li>Dockerized Nextflow pipelines on Slurm; CI to auto‑test & release.</li>
+            <li>Bayesian/phylogenetic modeling (BEAST, PISCA) for stem‑cell turnover.</li>
+            <li>Standardized variant workflows with VEP/ANNOVAR; reference validation against Ensembl/UCSC.</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>Translational Research Fellow — Arizona State University <span class="badge">Jan 2024 – Present</span></h3>
+          <ul class="list" role="list">
+            <li>De novo assembly & annotation pipelines orchestrated via Nextflow + Docker (HPC/AWS).</li>
+            <li>Automated Hi‑C analysis (HiC‑Pro, HGA) and repeat modeling (RepeatMasker/Modeler).</li>
+            <li>Reproducible scRNA‑seq & bulk RNA‑seq pipelines in R/Python.</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>Bioinformatics Intern (NGS/Clinical) — Ruby Hall Clinic <span class="badge">May 2023 – Jul 2023</span></h3>
+          <ul class="list" role="list">
+            <li>Designed clinical pipelines with BWA, GATK, SAMtools; CNV benchmarking.</li>
+            <li>Improved QC/reports with MultiQC; increased reliability for oncology calls.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLS -->
+    <section id="skills" class="striped">
+      <h2>Skills</h2>
+      <div class="tile">
         <div class="skills"><span class="skill">Python</span><span class="skill">R</span><span class="skill">C/C++</span><span class="skill">Bash</span><span class="skill">SQL</span></div>
-      </div>
-      <div class="row">
-        <strong>Workflows &amp; Infra</strong>
         <div class="skills"><span class="skill">Nextflow</span><span class="skill">Snakemake</span><span class="skill">Docker</span><span class="skill">Kubernetes</span><span class="skill">GitHub Actions</span><span class="skill">Slurm</span><span class="skill">AWS</span></div>
-      </div>
-      <div class="row">
-        <strong>Variant Repertoire</strong>
         <div class="skills"><span class="skill">GATK</span><span class="skill">SAMtools</span><span class="skill">bcftools</span><span class="skill">VEP</span><span class="skill">ANNOVAR</span><span class="skill">MiXCR</span><span class="skill">TRUST4</span></div>
-      </div>
-      <div class="row">
-        <strong>Epigenetics</strong>
         <div class="skills"><span class="skill">bismark</span><span class="skill">methylKit</span><span class="skill">bsseq</span></div>
-      </div>
-      <div class="row">
-        <strong>Data QC &amp; Viz</strong>
         <div class="skills"><span class="skill">FastQC</span><span class="skill">MultiQC</span><span class="skill">ggplot2</span><span class="skill">matplotlib</span><span class="skill">Cytoscape</span></div>
       </div>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="tile">
-      <ul class="list" role="list">
-        <li>Khandelwal C. Natural Remedies for Onychomycosis: A Review. <em>J Nat Remedies</em> 23(4), Oct 2023.</li>
-        <li>In progress: Trophic levels explain the inverse association between genetic variation and neoplasia in mammals.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="tile">
-      <p class="meta">Based in Arizona | Open to relocation</p>
-      <p><strong>Email:</strong> <a href="mailto:khandelwalchirag789@gmail.com">khandelwalchirag789@gmail.com</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/ChiragK10" target="_blank" rel="noopener">github.com/ChiragK10</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/chiragkhandelwal7" target="_blank" rel="noopener">linkedin.com/in/chiragkhandelwal7</a></p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="row" style="justify-content:space-between;align-items:center;">
-      <span id="y">2025</span> Chirag Khandelwal | Built with vanilla HTML/CSS/JS | MIT Licensed
-      <div class="footlinks"><a href="#home">Back to top</a></div>
-    </div>
-  </footer>
-
-  <script>
-    // Set year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Color mode toggle
-    // Uncomment below to persist theme in localStorage
-    /*
-    const body = document.body;
-    const btn = document.getElementById('mode');
-    let light = false;
-    btn.addEventListener('click', () => {
-      light = !light;
-      if (light) {
-        body.classList.add('light');
-        btn.setAttribute('aria-pressed', 'true');
-      } else {
-        body.classList.remove('light');
-        btn.setAttribute('aria-pressed', 'false');
-      }
-    });
-    */
-
-    // Skip-link for accessibility
-    const skip = document.createElement('a');
-    skip.href = '#projects';
-    skip.textContent = 'Skip to content';
-    skip.className = 'sr-only';
-    document.body.prepend(skip);
-
-    // Rich search/OG
-    const ld = {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Chirag Khandelwal",
-      "jobTitle": "Bioinformatics Engineer",
-      "url": window.location.href,
-      "sameAs": [
-        "https://github.com/ChiragK10",
-        "https://www.linkedin.com/in/chiragkhandelwal7"
-      ],
-      "worksFor": {
-        "@type": "CollegeOrUniversity",
-        "name": "Arizona State University"
-      },
-      "knowsAbout": ["Genomics","NGS","Nextflow","Snakemake","GATK","AWS HealthOmics","RNA-seq","WGS","WGBS","scRNA-seq","Hi-C"]
-    };
-    const s = document.createElement('script');
-    s.type = 'application/ld+json';
-    s.textContent = JSON.stringify(ld);
-    document.head.appendChild(s);
-  </script>
-</body>
-</html>
+    </section>
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="striped">
+      <h2>Publications</h2>
+      <div class="tile">
+        <ul class="list" role="list">
+          <li>Khandelwal C. Natural Remedies for Onychomycosis: A Review. <em>J Nat Remedies</em> 23(4), Oct 2023.</li>
+          <li>In progress: Trophic levels explain the inverse association between
